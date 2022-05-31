@@ -1,0 +1,113 @@
+.sidebar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 150px;
+
+    background: $black;
+    &-item {
+        width: 150px;
+        height: 44px;
+        border-bottom: 1px solid $text-color;
+        a {
+            display: block;
+            font-family: $primary-font;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 19px;
+            color: $text-color;
+            padding-top: 14px;
+            padding-left: 16px;
+        }
+        &:hover {
+            background-color: $gray-dark;
+            a {
+                color: $white;
+            }
+        }
+    }
+}
+
+.nav-icon-menu {
+    display: none;
+}
+@media screen and (max-width: 767px) {
+    .sidebar {
+        top: 0;
+        bottom: 0;
+        left: -100%;
+    }
+    .nav-icon-menu {
+        font-size: 50px;
+        display: block;
+        margin-left: 20px;
+        &:hover {
+            opacity: 0.5;
+            cursor: pointer;
+        }
+    }
+}
+
+// menu-mobile
+.nav-mb {
+    overflow: hidden;
+    background-color: $gray;
+    z-index: 999;
+    padding: 70px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.nav-mb-active {
+    left: 0;
+    opacity: 1;
+    overflow: hidden;
+}
+
+.nav-mb-hiden {
+    left: -100%;
+    opacity: 0;
+}
+
+.nav-icon-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 60px;
+    color: $gray-dark;
+
+    .nav:hover {
+        opacity: 0.3;
+        cursor: pointer;
+    }
+}
+
+.nav-mb-item {
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    border-bottom: 1px solid $gray-dark;
+
+    font-size: 16px;
+    &:hover {
+        background-color: $white;
+        color: red;
+    }
+    &-sign {
+        background-color: red;
+        color: red;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}

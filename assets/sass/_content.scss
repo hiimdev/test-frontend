@@ -1,0 +1,119 @@
+.content {
+    max-width: 1768px;
+    height: auto;
+    background: $white;
+    margin-left: 150px;
+    &-logo {
+        display: block;
+        width: 310px;
+        height: 122px;
+        margin: 20px auto 30px auto;
+    }
+    &-introduce {
+        background-color: $gray;
+        margin: 0 129px;
+        &-heading {
+            font-family: $primary-font;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 21px;
+            padding-top: 38px;
+            text-align: center;
+        }
+        &-desc {
+            font-family: $primary-font;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            padding: 38px 269px;
+        }
+    }
+
+    &-group {
+        display: flex;
+        margin: 40px 129px;
+        &-item {
+            max-width: 470px;
+            height: auto;
+            margin-right: 50px;
+            &:last-child {
+                margin-right: 0;
+            }
+
+            .item {
+                &-heading {
+                    font-family: $primary-font;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 28px;
+                    color: $black;
+                }
+                &-img {
+                    width: 128px;
+                    height: 128px;
+                }
+                &-desc {
+                    font-family: $primary-font;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 19px;
+
+                    color: $black;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 1200px) {
+        &-introduce-desc {
+            padding: 38px 20px;
+        }
+    }
+    @media (min-width: 1024px) and (max-width: 1200px) {
+        &-introduce-desc {
+            padding: 38px 20px;
+        }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        &-introduce {
+            margin: 0 20px;
+            &-desc {
+                padding: 10px;
+            }
+        }
+        &-group {
+            margin: 0 20px;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        margin: 3rem 0 0 0;
+        &-logo {
+            margin: 10px auto;
+        }
+        &-introduce {
+            margin: 0 10px;
+        }
+        &-introduce-desc {
+            padding: 10px;
+        }
+        &-group {
+            display: flex;
+            flex-direction: column;
+            margin: 40px 10px;
+            &-item {
+                margin: 20px;
+            }
+        }
+    }
+}
